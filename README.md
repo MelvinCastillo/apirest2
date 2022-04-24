@@ -1,6 +1,6 @@
 # apirest2 application
 
-This project was generated with Microsoft visual studio 2019 version 16.11.13. and with it you can get, update, and delete data the entity are students and usuarios1, this app instance a restful api to connect to a azure database, also the app use docker
+This project was generated with Microsoft visual studio 2019 version 16.11.13. and with it you can get, update, and delete data the entity are students and usuarios1 this app instance a restful api to connect to a azure database, also the app use docker implemented by a tool call docker-compose. 
 
 ## Technical Details
 # 1. DataBase:
