@@ -12,6 +12,7 @@ namespace apirestcore31.Repository.Models
     {
         [Key]
         public decimal? Secuencia { get; set; }
+        [Column(TypeName = "numeric(18, 0)")]
         public Guid StudentId { get; set; }
         [StringLength(100)]
         public string Name { get; set; }

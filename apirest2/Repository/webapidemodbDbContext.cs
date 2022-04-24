@@ -1,7 +1,5 @@
-﻿using System;
+﻿using apirestcore31.Repository.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using apirestcore31.Repository.Models;
 
 
 namespace apirestcore31.Repository
@@ -23,10 +21,10 @@ namespace apirestcore31.Repository
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-           if (!optionsBuilder.IsConfigured)
+            if (!optionsBuilder.IsConfigured)
             {
-// To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-              // Connectionstring to connect a sql server azure Database 
+                // To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                // Connectionstring to connect a sql server azure Database 
                 optionsBuilder.UseSqlServer("Data Source=melvindb.database.windows.net,1433;Initial Catalog=global;User Id=sa1;Password=Greysy123;");
             }
         }
@@ -46,9 +44,12 @@ namespace apirestcore31.Repository
 
             modelBuilder.Entity<Student>(entity =>
             {
-                entity.Property(e => e.StudentId).HasDefaultValueSql("(newid())");
-
+                //entity.Property(e => e.StudentId).HasDefaultValueSql("(newid())");
+                //entity.Property(e => e.StudentId).HasConversion<string>().HasDefaultValueSql("(newid())");
+                entity.Property(x => x.StudentId).HasColumnType("uniqueidentifier").IsRequired().ValueGeneratedOnAdd().HasDefaultValueSql("newid()");
                 entity.Property(e => e.Name).IsUnicode(false);
+                // entity.Property(e => e.Secuencia).HasPrecision(18, 0);
+                entity.Property(e => e.Secuencia).HasColumnType("numeric(18, 0)");
 
                 entity.Property(e => e.RollNumber).IsUnicode(false);
 
