@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  apirestcore31:
+    image: ${DOCKER_REGISTRY-}apirestcore31
+    build:
+      context: .
+      dockerfile: apirestcore31/Dockerfile
