@@ -1,18 +1,8 @@
-# apirest2
+# apirest2 application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9. and with it you can get, update, and delete data the entity are students and usuarios1, this app instance a restful api to connect to a azure database
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
+This project was generated with Microsoft visual studio 2019 version 16.11.13. and with it you can get, update, and delete data the entity are students and usuarios1, this app instance a restful api to connect to a azure database, also the app use docker
 
 ## Technical Details
-
 # 1. DataBase:
 Microsoft SQL Azure (RTM) - 12.0.2000.8   Feb 23 2022 11:32:53   
 Copyright (C) 2021 Microsoft Corporation 
